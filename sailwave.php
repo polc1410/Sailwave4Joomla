@@ -18,21 +18,25 @@ class plgContentSailwave extends JPlugin {
         $scoreendKey = 0;
 
         // read raw text as array
-        $rawText = file($resultFile) or die("Cannot read file");
+        if (file_exists( $resultFile)!=TRUE) {
+            #Sailwave file does not exist
+            $html = "Sorry no results file is yet available."
+        } else {
+            $rawText = file($resultFile) or die("Cannot read file");
+        
+            // join remaining data into string
+            $resultData = join('', $rawText);
 
-        // join remaining data into string
-        $resultData = join('', $rawText);
+            //find the substrings
+            $scorestartKey = strpos ( $resultData , $scorestart );
+            $scoreendKey = strpos ( $resultData , $scoreend );
 
-        //find the substrings
-        $scorestartKey = strpos ( $resultData , $scorestart );
-        $scoreendKey = strpos ( $resultData , $scoreend );
-
-        //pull out just the results and the Sailwave footer
-        $html=substr ( $resultData , $scorestartKey , $scoreendKey-$scorestartKey );
-
+            //pull out just the results and the Sailwave footer
+            $html=substr ( $resultData , $scorestartKey , $scoreendKey-$scorestartKey );
+        }
         //put it on the page
         echo $html;
-        
+
     }
 }
 ?>
