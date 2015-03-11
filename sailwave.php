@@ -8,10 +8,21 @@ defined('_JEXEC') or die;
 class plgContentSailwave extends JPlugin {
     
     public function onContentPrepare($context, &$row, &$params, $page = 0) {
-        $row->text = str_replace("{sailwave: 01012015}","Sailwave Results Here",$row->text);
+    //   $row->text = str_replace("{sailwave: 01012015}","Sailwave Results Here",$row->text);
     
+        //Look for a {sailwave: *} pattern
+        if (strpos ( $row->text , "{sailwave:" ) === false ) {
+            // No match found so leave the function
+            return;
+        }
+        $remains = strstr($row->text , '{sailwave:');
+        $sailwaveChunk = strstr($remains, '}', true);
+        $sailwavePieces = explode (":",$sailwaveChunk);
+        $fileref = trim($sailwavePieces[1]);
+        //
         // set source file name and path
-        $resultFile = "results/namresults.html";
+        $sailwavePath  = $this->params->get('sailwave_ftp_folder');
+        $resultFile = $sailwavePath.DIRECTORY_SEPARATOR.$fileref.".html";
         $scorestart = "<h3 class=";
         $scoreend = "<footer>";
         $scorestartKey = 0;
@@ -20,7 +31,7 @@ class plgContentSailwave extends JPlugin {
         // read raw text as array
         if (file_exists( $resultFile)!=TRUE) {
             #Sailwave file does not exist
-            $html = "Sorry no results file is yet available.";
+            $html = "Sorry no results file is yet available. (file:".$resultFile;
         } else {
             $rawText = file($resultFile) or die("Cannot read file");
         
