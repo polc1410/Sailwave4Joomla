@@ -8,8 +8,7 @@ defined('_JEXEC') or die;
 class plgContentSailwave extends JPlugin {
     
     public function onContentPrepare($context, &$row, &$params, $page = 0) {
-    //   $row->text = str_replace("{sailwave: 01012015}","Sailwave Results Here",$row->text);
-    
+  
         //Look for a {sailwave: *} pattern
         if (strpos ( $row->text , "{sailwave:" ) === false ) {
             // No match found so leave the function
@@ -22,7 +21,7 @@ class plgContentSailwave extends JPlugin {
         //
         // set source file name and path
         $sailwavePath  = $this->params->get('sailwave_ftp_folder');
-        $resultFile = $sailwavePath.DIRECTORY_SEPARATOR.$fileref.".html";
+        $resultFile = JPATH_BASE.DIRECTORY_SEPARATOR.$sailwavePath.DIRECTORY_SEPARATOR.$fileref.".html";
         $scorestart = "<h3 class=";
         $scoreend = "<footer>";
         $scorestartKey = 0;
@@ -31,7 +30,7 @@ class plgContentSailwave extends JPlugin {
         // read raw text as array
         if (file_exists( $resultFile)!=TRUE) {
             #Sailwave file does not exist
-            $html = "Sorry no results file is yet available. (file:".$resultFile;
+            $html = "<p class="info">Sorry no results are yet available.</p>";
         } else {
             $rawText = file($resultFile) or die("Cannot read file");
         
@@ -46,8 +45,8 @@ class plgContentSailwave extends JPlugin {
             $html=substr ( $resultData , $scorestartKey , $scoreendKey-$scorestartKey );
         }
         //put it on the page
-        echo $html;
-
+    $row->text = str_replace($sailwaveChunk."}",$html,$row->text);
+   
     }
 }
 ?>
