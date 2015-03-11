@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="0.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_sailwave</name>
+	<author>Calum Polwart</author>
+	<creationDate>March 2015</creationDate>
+	<copyright></copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>cpolwart@chemo.org.uk</authorEmail>
+	<authorUrl>www.chemo.org.uk</authorUrl>
+	<version>0.1</version>
+	<description>PLG_CONTENT_SAILWAVE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="sailwave">sailwave.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_sailwave.ini</language>
+		<language tag="en-GB">en-GB.plg_content_sailwave.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+ 
+			<fieldset name="basic">
+				<field name="sailwave_ftp_folder" type="text"
+					default="/results"
+					description="JFIELD_PLG_CONTENT_SAILWAVE_FTP_FOLDER"
+					label="JFIELD_PLG_CONTENT_SAILWAVE_FTP_LABEL"
+					size="5"
+				/>
+ 
+			</fieldset>
+ 
+		</fields>
+	</config>
+</extension>
