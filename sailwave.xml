@@ -14,8 +14,8 @@
 		<filename>index.html</filename>
 	</files>
 	<languages>
-		<language tag="en-GB">en-GB.plg_content_sailwave.ini</language>
-		<language tag="en-GB">en-GB.plg_content_sailwave.sys.ini</language>
+		<language tag="en-GB">Language/en-GB.plg_content_sailwave.ini</language>
+		<language tag="en-GB">Language/en-GB.plg_content_sailwave.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
