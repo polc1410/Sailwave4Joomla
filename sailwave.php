@@ -20,7 +20,7 @@ class plgContentSailwave extends JPlugin {
         // read raw text as array
         if (file_exists( $resultFile)!=TRUE) {
             #Sailwave file does not exist
-            $html = "Sorry no results file is yet available."
+            $html = "Sorry no results file is yet available.";
         } else {
             $rawText = file($resultFile) or die("Cannot read file");
         
