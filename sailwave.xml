@@ -25,9 +25,36 @@
 					default="/results"
 					description="JFIELD_PLG_CONTENT_SAILWAVE_FTP_FOLDER"
 					label="JFIELD_PLG_CONTENT_SAILWAVE_FTP_LABEL"
-					size="5"
+					size="50"
 				/>
- 
+                                
+                                <field name="sailwave_style" type="text"
+                                        default="body {font: 80% arial, helvetica, sans-serif; text-align: center;}  
+.hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
+.hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
+table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 2px #008 solid;}
+td, th {padding: 4px; border: 1px #008 solid; vertical-align: top; color: black;}
+.caption {padding: 5px; text-align: center; border: 0;}
+th {background-color: #B0AEAE; font-weight: bold;}
+  
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+p {text-align: center;}
+.even {background-color: #f0f0f0;}
+.odd {background-color: #fff;}
+.contents {text-align: left; margin-left: 20%;}
+.natflag {border: 1px #999 solid;width:28px;}
+.nattext {font-size: 0.8em;}
+.place1 {font-weight: bold; background-color: #ffffaa;}
+.place2 {font-weight: bold; background-color: #aaaaff;}
+.place3 {font-weight: bold; background-color: #ffaaaa;}
+.placen {}
+" 
+description="JFIELD_PLG_CONTENT_SAILWAVE_CSS_STYLE"
+					label="JFIELD_PLG_CONTENT_SAILWAVE_STYLE_LABEL"
+					size="500"
+				/>
 			</fieldset>
  
 		</fields>
