@@ -29,27 +29,28 @@
 				/>
                                 
                                 <field name="sailwave_style" type="text"
-                                        default="body {font: 80% arial, helvetica, sans-serif; text-align: center;}  
+                                        default="
+div.sailwave {font: 80% arial, helvetica, sans-serif; text-align: center;}  
 .hardleft  {text-align: left; float: left;  margin: 15px 0  15px 25px;}
 .hardright {text-align: right; float: right; margin: 15px 25px 15px 0;}
-table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 2px #008 solid;}
-td, th {padding: 4px; border: 1px #008 solid; vertical-align: top; color: black;}
-.caption {padding: 5px; text-align: center; border: 0;}
-th {background-color: #B0AEAE; font-weight: bold;}
+div.sailwave table {text-align: left; margin: 0px auto 30px auto; font-size: 1em; border-collapse: collapse; border: 2px #008 solid;}
+div.sailwave td, th {padding: 4px; border: 1px #008 solid; vertical-align: top; color: black;}
+div.sailwave .caption {padding: 5px; text-align: center; border: 0;}
+div.sailwave th {background-color: #B0AEAE; font-weight: bold;}
   
-h1 {font-size: 1.6em;}
-h2 {font-size: 1.4em;}
-h3 {font-size: 1.2em;}
-p {text-align: center;}
-.even {background-color: #f0f0f0;}
-.odd {background-color: #fff;}
-.contents {text-align: left; margin-left: 20%;}
-.natflag {border: 1px #999 solid;width:28px;}
-.nattext {font-size: 0.8em;}
-.place1 {font-weight: bold; background-color: #ffffaa;}
-.place2 {font-weight: bold; background-color: #aaaaff;}
-.place3 {font-weight: bold; background-color: #ffaaaa;}
-.placen {}
+div.sailwave h1 {font-size: 1.6em;}
+div.sailwave h2 {font-size: 1.4em;}
+div.sailwave h3 {font-size: 1.2em;}
+div.sailwave p {text-align: center;}
+div.sailwave .even {background-color: #f0f0f0;}
+div.sailwave .odd {background-color: #fff;}
+div.sailwave .contents {text-align: left; margin-left: 20%;}
+div.sailwave .natflag {border: 1px #999 solid;width:28px;}
+div.sailwave .nattext {font-size: 0.8em;}
+div.sailwave .place1 {font-weight: bold; background-color: #ffffaa;}
+div.sailwave .place2 {font-weight: bold; background-color: #aaaaff;}
+div.sailwave .place3 {font-weight: bold; background-color: #ffaaaa;}
+div.sailwave .placen {}
 " 
 description="JFIELD_PLG_CONTENT_SAILWAVE_CSS_STYLE"
 					label="JFIELD_PLG_CONTENT_SAILWAVE_STYLE_LABEL"
