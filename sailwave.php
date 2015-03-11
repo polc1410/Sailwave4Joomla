@@ -14,6 +14,8 @@ class plgContentSailwave extends JPlugin {
             // No match found so leave the function
             return;
         }
+        $lang = JFactory::getLanguage();
+        $lang->load('plg_content_sailwave', JPATH_ADMINISTRATOR );
         $remains = strstr($row->text , '{sailwave:');
         $sailwaveChunk = strstr($remains, '}', true);
         $sailwavePieces = explode (":",$sailwaveChunk);
