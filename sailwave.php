@@ -48,9 +48,10 @@ class plgContentSailwave extends JPlugin {
 
             //pull out just the results and the Sailwave footer
             $html=substr ( $resultData , $scorestartKey , $scoreendKey-$scorestartKey );
+            $html = "<style>".$sailwaveStyle."</style> <div class='sailwave'" . $html."</div>";
         }
         //put it on the page
-    $html = "<style>".$sailwaveStyle."</style> <div class='sailwave'" . $html."</div>";
+
     $row->text = str_replace($sailwaveChunk."}",$html,$row->text);
    
     }
