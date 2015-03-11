@@ -1,5 +1,6 @@
 <?php
 // Original code provided by andy@sailor.nu
+// from sailwave discussion board on yahoo groups.
 // 
 // no direct access
 defined('_JEXEC') or die;
