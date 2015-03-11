@@ -26,6 +26,8 @@ class plgContentSailwave extends JPlugin {
         $scoreend = "<footer>";
         $scorestartKey = 0;
         $scoreendKey = 0;
+        
+        $sailwaveStyle = $this->params->get('sailwave_style');
 
         // read raw text as array
         if (file_exists( $resultFile)!=TRUE) {
@@ -45,6 +47,7 @@ class plgContentSailwave extends JPlugin {
             $html=substr ( $resultData , $scorestartKey , $scoreendKey-$scorestartKey );
         }
         //put it on the page
+    $html = "<style>".$sailwaveStyle."</style> <div class='sailwave'" . $html."</div>";
     $row->text = str_replace($sailwaveChunk."}",$html,$row->text);
    
     }
