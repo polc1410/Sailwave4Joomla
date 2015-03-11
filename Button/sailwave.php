@@ -7,10 +7,11 @@ defined('_JEXEC') or die;
 
 class plgButtonSailwave extends JPlugin {
     
-    public function onDisplay($name) {
+    function onDisplay($name) {
         $button = new JObject();
-        $button->set('text','HelloButton');
-        $button->set('name', 'HelloButton');
+        $button->set('text','Sailwave');
+        $button->set('onclick', 'alert(\'Sailwave Pressed\');');
+        $button->set('name', 'Sailwave');
         return $button;
     }
 }
