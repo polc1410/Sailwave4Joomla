@@ -7,7 +7,9 @@
     define( 'JPATH_BASE', realpath( '..'.DS.'..'.DS.'..'.DS ) );   
     require_once ( JPATH_BASE.DS.'includes'.DS.'defines.php' );
     require_once ( JPATH_BASE.DS.'includes'.DS.'framework.php' );
- 
+    $lang = JFactory::getLanguage();
+    $lang->load('plg_editor-xtd_sailwave', JPATH_ADMINISTRATOR, NULL, true);
+    $lang->load('plg_editor-xtd_sailwave', JPATH_SITE, NULL, true);
     $mainframe =& JFactory::getApplication('administrator');       
     jimport( 'joomla.plugin.plugin' ); 
  
@@ -39,9 +41,9 @@
                     <tr>
                         <td colspan="2"><h3><?= JText::_('Sailwave Results Inserter') ?></h3></td>
                     </tr>
-                    <tr><td colspan="2"><b>If the Sailwave Results file has already been uploaded select it below:</b></td></tr>
+                    <tr><td colspan="2"><b>JText::_(PLG_EDITOR-XTD_IFUPLOADED)</b></td></tr>
                     <tr>
-                        <td>Select File: </td>
+                        <td>JText::_(PLG_EDITOR-XTD_SELECTFILE) </td>
                         <td nowrap>
                    <?php
                    $corepath = JPATH_BASE. DIRECTORY_SEPARATOR . "results";
@@ -73,9 +75,9 @@
 
                    ?>
                     </tr>
-                    <tr><td colspan="2"><b>Otherwise enter the filename below, and ensure the scorer knows the correct filename to upload:</b></td></tr>
+                    <tr><td colspan="2"><b>JText::_(PLG_EDITOR-XTD_TYPEFILE)</b></td></tr>
                     <tr>
-                        <td>Filename : </td>
+                        <td>JText::_(PLG_EDITOR-XTD_FILENAME) </td>
                         <td nowrap><input class="" id="filename" name="filename" value=""></td>
                     </tr
          </table>
