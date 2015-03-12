@@ -8,14 +8,16 @@
 	<authorEmail>cpolwart@chemo.org.uk</authorEmail>
 	<authorUrl>www.chemo.org.uk</authorUrl>
 	<version>0.1</version>
-	<description>PLG_EDITOR-XTD_SAILWAVE_XML_DESCRIPTION</description>
+	<description>PLG_EDITORS-XTD_SAILWAVE_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="sailwave">sailwave.php</filename>
 		<filename>index.html</filename>
+                <filename>dialog.php</filename>
+                <filename>dialog.css</filename>
 	</files>
 	<languages>
-		<language tag="en-GB">Language/en-GB.plg_editor-xtd_sailwave.ini</language>
-		<language tag="en-GB">Language/en-GB.plg_editor-xtd_sailwave.sys.ini</language>
+		<language tag="en-GB">Language/en-GB.plg_editors-xtd_sailwave.ini</language>
+		<language tag="en-GB">Language/en-GB.plg_editors-xtd_sailwave.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
