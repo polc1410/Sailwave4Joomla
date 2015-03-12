@@ -9,15 +9,11 @@ class plgButtonSailwave extends JPlugin {
     
     function onDisplay($name) {
         $doc = JFactory::getDocument();
-        $jsCode = "
-                function insertText(nameOfEditor) {
-                    jInsertEditorText('Hello World, I am doing just fine', nameOfEditor);
-                }
-               
-            function SailwaveCallback( editor, result){
+        $jsCode = "     
+            function SailwaveCallback( editor, result, filenamed){
                 if( result  ) { 
-                    alert(result);
-                    insertText('CALUM');
+                        var textInsertion = '{sailwave: '+filenamed+'}';
+                    jInsertEditorText(textInsertion, editor);
                 }
             }
        
