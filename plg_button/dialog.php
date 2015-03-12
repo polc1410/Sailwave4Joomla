@@ -50,7 +50,10 @@
                         <td><?= JText::_('PLG_EDITORS-XTD_SAILWAVEBUTTON_SELECTFILE') ?></td>
                         <td nowrap>
                    <?php
-                   $corepath = JPATH_BASE. DIRECTORY_SEPARATOR . "results";
+                   $plugin = JPluginHelper::getPlugin('content', 'sailwave');
+                   $params = new JParameter($plugin->params);
+                   $sailwavePath  = $params->get('sailwave_ftp_folder');
+                   $corepath = JPATH_BASE. DIRECTORY_SEPARATOR . $sailwavePath;
                    $filepath = $corepath;
                    if ( $_GET['dir'] ) {
                         $filepath = $filepath. DIRECTORY_SEPARATOR . $_GET['dir'];
