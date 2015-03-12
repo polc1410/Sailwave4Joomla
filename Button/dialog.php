@@ -44,7 +44,8 @@
                         <td>Select File: </td>
                         <td nowrap>
                    <?php
-                   $filepath = JPATH_BASE. DIRECTORY_SEPARATOR . "results";
+                   $corepath = JPATH_BASE. DIRECTORY_SEPARATOR . "results";
+                   $filepath = $corepath;
                    if ( $_GET['dir'] ) {
                         $filepath = $filepath. DIRECTORY_SEPARATOR . $_GET['dir'];
                         $filechain = $_GET['dir'] . DIRECTORY_SEPARATOR;
@@ -56,12 +57,15 @@
                    foreach($files as $file) {
                        if (is_dir($filepath. DIRECTORY_SEPARATOR . $file)){
                            if ($file != "."){
+                               if ($file ==".." && realpath($filepath)!= $corepath) {
                                    echo "<a href='?dir=".$filechain . $file."&ih_name=".$ih_name ."'>".$file . "/</a><br />";
+                               } elseif ($file !="..") {
+                                   echo "<a href='?dir=".$filechain . $file."&ih_name=".$ih_name ."'>".$file . "/</a><br />";
+                               }
                            }        
-                                   
-                       if (!is_dir($filepath. DIRECTORY_SEPARATOR . $file)){
+                       } else {            
                            if (pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_EXTENSION)=="html"){
-                            echo "<a href='#' onclick=\"document.getElementById('filename').value = '". $filechain.  pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME). "';\">".pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME)."</a><br />";
+                                 echo "<a href='#' onclick=\"document.getElementById('filename').value = '". $filechain.  pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME). "';\">".pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME)."</a><br />";
                            }
                        }
                    }
