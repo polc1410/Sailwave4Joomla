@@ -10,7 +10,7 @@
 	<version>0.1</version>
 	<description>PLG_EDITORS-XTD_SAILWAVE_XML_DESCRIPTION</description>
 	<files>
-		<filename plugin="sailwave">sailwave.php</filename>
+		<filename plugin="sailwave-button">sailwave-button.php</filename>
 		<filename>index.html</filename>
                 <filename>dialog.php</filename>
                 <filename>dialog.css</filename>

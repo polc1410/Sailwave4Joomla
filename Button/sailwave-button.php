@@ -19,7 +19,7 @@ class plgButtonSailwave extends JPlugin {
        
             ";
         $doc->addScriptDeclaration($jsCode);
-        $link = '../plugins/editors-xtd/sailwave/dialog.php?ih_name='.$name;
+        $link = '../plugins/editors-xtd/sailwave-button/dialog.php?ih_name='.$name;
         JHTML::_('behavior.modal');
         $button = new JObject();
         $button->set('modal', true);

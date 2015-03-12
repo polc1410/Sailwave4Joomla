@@ -7,12 +7,12 @@
     define( 'JPATH_BASE', realpath( '..'.DS.'..'.DS.'..'.DS ) );   
     require_once ( JPATH_BASE.DS.'includes'.DS.'defines.php' );
     require_once ( JPATH_BASE.DS.'includes'.DS.'framework.php' );
-    $lang = JFactory::getLanguage();
-    $lang->load('plg_editor-xtd_sailwave', JPATH_ADMINISTRATOR, NULL, true);
-    $lang->load('plg_editor-xtd_sailwave', JPATH_SITE, NULL, true);
     $mainframe =& JFactory::getApplication('administrator');       
     jimport( 'joomla.plugin.plugin' ); 
- 
+    $language = JFactory::getLanguage();
+    //$language->load('plg_editors-xtd_sailwave-button', JPATH_ADMINISTRATOR, NULL, true);
+    //$language->load('plg_editors-xtd_sailwave-button', JPATH_SITE, NULL, true);
+    $language->load('plg_editors-xtd_sailwave-button');
     $ih_name = addslashes( $_GET['ih_name'] );
 ?>
 <html>
@@ -35,15 +35,18 @@
     </script>
     </head>
     <body>
+        <?php 
+            print_r ($language);
+           ?>
         <form name="inserthtml" id="inserthtml" onSubmit="return false;">
             <fieldset>
                 <table class="properties">                   
                     <tr>
                         <td colspan="2"><h3><?= JText::_('Sailwave Results Inserter') ?></h3></td>
                     </tr>
-                    <tr><td colspan="2"><b>JText::_(PLG_EDITOR-XTD_IFUPLOADED)</b></td></tr>
+                    <tr><td colspan="2"><b><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_IFUPLOADED) ?></b></td></tr>
                     <tr>
-                        <td>JText::_(PLG_EDITOR-XTD_SELECTFILE) </td>
+                        <td><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_SELECTFILE) ?></td>
                         <td nowrap>
                    <?php
                    $corepath = JPATH_BASE. DIRECTORY_SEPARATOR . "results";
@@ -75,9 +78,9 @@
 
                    ?>
                     </tr>
-                    <tr><td colspan="2"><b>JText::_(PLG_EDITOR-XTD_TYPEFILE)</b></td></tr>
+                    <tr><td colspan="2"><b><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_TYPEFILE) ?></b></td></tr>
                     <tr>
-                        <td>JText::_(PLG_EDITOR-XTD_FILENAME) </td>
+                        <td><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_FILENAME) ?></td>
                         <td nowrap><input class="" id="filename" name="filename" value=""></td>
                     </tr
          </table>
