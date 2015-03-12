@@ -22,9 +22,8 @@
  
         function InsertHtmlDialogokClick() {
             var result="OK";
-            var fileselect = document.getElementById("fileselect").value ;
-            var filenamed = document.getElementById("filename").value ;
-            window.parent.SailwaveCallback( '<?= $ih_name ?>', result, fileselect, filenamed );
+               var filenamed = document.getElementById("filename").value ;
+            window.parent.SailwaveCallback( '<?= $ih_name ?>', result, filenamed );
             window.parent.SqueezeBox.close();     
         }
  
@@ -47,8 +46,8 @@
                    <?php
                    $filepath = JPATH_BASE. DIRECTORY_SEPARATOR . "results";
                    if ( $_GET['dir'] ) {
-                        $filepath = $filepath. $_GET['dir'];
-                        $filechain = $_GET['dir'];
+                        $filepath = $filepath. DIRECTORY_SEPARATOR . $_GET['dir'];
+                        $filechain = $_GET['dir'] . DIRECTORY_SEPARATOR;
                    } else {
                        $filechain = "";
                    }
@@ -56,10 +55,10 @@
                    $files = scandir ( $filepath);
                    foreach($files as $file) {
                        if (is_dir($filepath. DIRECTORY_SEPARATOR . $file)){
-                           echo "<a href='?dir=".$filechain . DIRECTORY_SEPARATOR . $file."&ih_name=".$ih_name ."'>".$file . "/</a><br />";
+                                   echo "<a href='?dir=".$filechain . $file."&ih_name=".$ih_name ."'>".$file . "/</a><br />";
                        } else {
                            if (pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_EXTENSION)=="html"){
-                            echo "<a href='#' onclick=\"document.getElementById('filename').value = '". $filechain. DIRECTORY_SEPARATOR . $file. "';\">".pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME)."</a><br />";
+                            echo "<a href='#' onclick=\"document.getElementById('filename').value = '". $filechain.  $file. "';\">".pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME)."</a><br />";
                            }
                        }
                    }
