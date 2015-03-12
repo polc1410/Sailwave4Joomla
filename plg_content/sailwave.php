@@ -1,8 +1,11 @@
 <?php
-// Original code provided by andy@sailor.nu
-// from sailwave discussion board on yahoo groups.
-// 
-// no direct access
+/**
+ * @author Calum Polwart, derived from code from Andy@sailor.nu on yahoo group
+ * @date: 12 Mar 2015
+ *
+ * @copyright  Copyright (C) 2015 Calum Polwart & Andy@sailor.nu
+ * @license    GNU General Public License version 2 or later; see LICENSE
+ */
 defined('_JEXEC') or die;
 
 class plgContentSailwave extends JPlugin {
