@@ -10,10 +10,7 @@
     $mainframe =& JFactory::getApplication('administrator');       
     jimport( 'joomla.plugin.plugin' ); 
     $lang = JFactory::getLanguage();
-    //$language->load('plg_editors-xtd_sailwavebutton', $language->load('plg_editors-xtd_sailwave', JPATH_ADMINISTRATOR, NULL, true);, NULL, true);
-    //$language->load('plg_editors-xtd_sailwavebutton', JPATH_SITE, NULL, true);
     $lang->load('plg_editors-xtd_sailwavebutton',JPATH_ADMINISTRATOR, 'en-GB', true );
-    //JFactory::getLanguage()->load('plg_editors-xtd_sailwavebutton');
     $ih_name = addslashes( $_GET['ih_name'] );
 ?>
 <html>
@@ -36,9 +33,6 @@
     </script>
     </head>
     <body>
-        <?php 
-            print_r ($lang);
-           ?>
         <form name="inserthtml" id="inserthtml" onSubmit="return false;">
             <fieldset>
                 <table class="properties">                   
