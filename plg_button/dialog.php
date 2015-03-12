@@ -51,7 +51,7 @@
                         <td nowrap>
                    <?php
                    $plugin = JPluginHelper::getPlugin('content', 'sailwave');
-                   $params = new JParameter($plugin->params);
+                   $params = new JRegistry($plugin->params);
                    $sailwavePath  = $params->get('sailwave_ftp_folder');
                    $corepath = JPATH_BASE. DIRECTORY_SEPARATOR . $sailwavePath;
                    $filepath = $corepath;
