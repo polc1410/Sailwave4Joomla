@@ -1,8 +1,14 @@
 <?  
-/*
- * Insert HTML editor button plugin for Joomla! file  
+/**
+ * @author Calum Polwart, derived from examples on internet
+ * @date: 12 Mar 2015
+ *
+ * @copyright  Copyright (C) 2015 Calum Polwart
+ * @license    GNU General Public License version 2 or later; see LICENSE
  */
+
     define( '_JEXEC', 1 );
+    defined( '_JEXEC' ) or die ( 'Restricted access' );
     define( 'DS', DIRECTORY_SEPARATOR );
     define( 'JPATH_BASE', realpath( '..'.DS.'..'.DS.'..'.DS ) );   
     require_once ( JPATH_BASE.DS.'includes'.DS.'defines.php' );
