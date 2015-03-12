@@ -1,8 +1,12 @@
 <?php
-// Original code provided by andy@sailor.nu
-// from sailwave discussion board on yahoo groups.
-// 
-// no direct access
+/**
+ * @author Calum Polwart using examples from internet
+ * @date: 12 Mar 2015
+ *
+ * @copyright  Copyright (C) 2015 Calum Polwart
+ * @license    GNU General Public License version 2 or later; see LICENSE
+ */
+
 defined('_JEXEC') or die;
 
 class plgButtonSailwavebutton extends JPlugin {

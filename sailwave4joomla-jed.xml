@@ -13,7 +13,7 @@ Where filename is an html file in the sailwave FTP folder.  To aid insertion of 
 
 The orginal code to do this was provided by Andy Barrow on the Sailwave Discussion Group and has been modified into a joomla plugin.
     
-    
+Latest updates allow the button plugin to list files from any sailwave FTP folder configures by the content plugin.    
 	</core_body>
 	
 	<!-- valid links only or leave blank -->
@@ -24,7 +24,7 @@ The orginal code to do this was provided by Andy Barrow on the Sailwave Discussi
 	<support_link>https://github.com/polc1410/Sailwave4Joomla/issues</support_link>
 	<license_link>https://github.com/polc1410/Sailwave4Joomla/blob/master/LICENSE</license_link>
 	
-	<version>0.1-beta-b</version>
+	<version>0.2-beta-a</version>
 
 	<compatibility>
 		<version>34</version>
