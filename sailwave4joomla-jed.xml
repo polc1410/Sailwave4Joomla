@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jedupdate version="1">
+	<core_body>
+	Sailwave4Joomla is a project intended to integrate flat form HTML from sailwave (http://www.sailwave.com) into Joomla. It doesn't do any scoring. You must still do all you scoring in Sailwave's Windows Client, and you must continue to comply with sailwave's licencing requirement of leaving the sailwave.com footer in place.
+
+Sailwave4Joomla simply takes the HTML files from Sailwave and massages them a little to allow them to be embedded in a Joomla Article or other Content Item. It does it using a Joomla Content Plugin. 
+
+The plugin supports a tag format: 
+
+    {sailwave: filename-noextension}
+    
+Where filename is an html file in the sailwave FTP folder.  To aid insertion of tags the an editor button plugin is provided.  A clean fall over is provided allowing a results entry to be inserted in an article for resutls that have not yet been uploaded.
+
+The orginal code to do this was provided by Andy Barrow on the Sailwave Discussion Group and has been modified into a joomla plugin.
+    
+    
+	</core_body>
+	
+	<!-- valid links only or leave blank -->
+	<homepage_link>https://github.com/polc1410/Sailwave4Joomla</homepage_link>
+	<download_link>https://github.com/polc1410/Sailwave4Joomla/releases</download_link>
+	<demo_link></demo_link>
+	<documentation_link>https://github.com/polc1410/Sailwave4Joomla/wiki</documentation_link>
+	<support_link>https://github.com/polc1410/Sailwave4Joomla/issues</support_link>
+	<license_link>https://github.com/polc1410/Sailwave4Joomla/blob/master/LICENSE</license_link>
+	
+	<version>0.1-beta-a</version>
+
+	<compatibility>
+		<version>34</version>
+	</compatibility>
+</jedupdate>
