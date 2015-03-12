@@ -5,7 +5,14 @@
 // no direct access
 defined('_JEXEC') or die;
 
-class plgButtonSailwave extends JPlugin {
+class plgButtonSailwavebutton extends JPlugin {
+    	/**
+* Load the language file on instantiation.
+*
+* @var boolean
+* @since 3.1
+*/
+protected $autoloadLanguage = true;
     
     function onDisplay($name) {
         $doc = JFactory::getDocument();
@@ -19,7 +26,7 @@ class plgButtonSailwave extends JPlugin {
        
             ";
         $doc->addScriptDeclaration($jsCode);
-        $link = '../plugins/editors-xtd/sailwave-button/dialog.php?ih_name='.$name;
+        $link = '../plugins/editors-xtd/sailwavebutton/dialog.php?ih_name='.$name;
         JHTML::_('behavior.modal');
         $button = new JObject();
         $button->set('modal', true);

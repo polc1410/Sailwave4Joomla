@@ -9,6 +9,6 @@
  <description>Contains Sailwave Content Plugin and Sailwave editor Button</description>
  <files folder="packages">
    <file type="plugin" id="sailwave" group="content">plg_content.zip</file>
-   <file type="plugin" id="sailwave" group="editor-xtd">plg_button.zip</file>
+   <file type="plugin" id="sailwavebutton" group="editor-xtd">plg_button.zip</file>
  </files>
  </extension>
