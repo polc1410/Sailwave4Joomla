@@ -15,7 +15,8 @@ class plgContentSailwave extends JPlugin {
             return;
         }
         $lang = JFactory::getLanguage();
-        $lang->load('plg_content_sailwave', JPATH_ADMINISTRATOR );
+        $lang->load('plg_content_sailwave', JPATH_ADMINISTRATOR, NULL, true);
+        $lang->load('plg_content_sailwave', JPATH_SITE, NULL, true);
         $remains = strstr($row->text , '{sailwave:');
         $sailwaveChunk = strstr($remains, '}', true);
         $sailwavePieces = explode (":",$sailwaveChunk);
@@ -34,7 +35,7 @@ class plgContentSailwave extends JPlugin {
         // read raw text as array
         if (file_exists( $resultFile)!=TRUE) {
             #Sailwave file does not exist
-            $html = "<p class='info'>".PLG_CONTENT_SAILWAVE_NO_RESULT."</p>";
+            $html = "<p class='info'>".JText::_('PLG_CONTENT_SAILWAVE_NO_RESULT')."</p>";
         } else {
             $rawText = file($resultFile) or die("Cannot read file");
         
@@ -47,9 +48,10 @@ class plgContentSailwave extends JPlugin {
 
             //pull out just the results and the Sailwave footer
             $html=substr ( $resultData , $scorestartKey , $scoreendKey-$scorestartKey );
+            $html = "<style>".$sailwaveStyle."</style> <div class='sailwave'" . $html."</div>";
         }
         //put it on the page
-    $html = "<style>".$sailwaveStyle."</style> <div class='sailwave'" . $html."</div>";
+
     $row->text = str_replace($sailwaveChunk."}",$html,$row->text);
    
     }

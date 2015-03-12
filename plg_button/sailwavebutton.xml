@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="0.1" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Sailwave Results Button Plugin</name>
+	<author>Calum Polwart</author>
+	<creationDate>March 2015</creationDate>
+	<copyright>(c)Calum Polwart</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>cpolwart@chemo.org.uk</authorEmail>
+	<authorUrl>www.chemo.org.uk</authorUrl>
+	<version>0.1</version>
+	<description>PLG_EDITORS-XTD_SAILWAVEBUTTON_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="sailwavebutton">sailwavebutton.php</filename>
+		<filename>index.html</filename>
+                <filename>dialog.php</filename>
+                <filename>dialog.css</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">Language/en-GB.plg_editors-xtd_sailwavebutton.ini</language>
+		<language tag="en-GB">Language/en-GB.plg_editors-xtd_sailwavebutton.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+ 
+
+ 
+		</fields>
+	</config>
+</extension>

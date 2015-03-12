@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <extension type="package" version="0.1" method="upgrade">
+ <name>Sailwave4Joomla Package</name>
+ <author>Calum Polwart and Others</author>
+ <creationDate>March 2015</creationDate>
+ <packagename>sailwave</packagename>
+ <version>0.1</version>
+ <url>http://www.chemo.org.uk</url>
+ <description>Contains Sailwave Content Plugin and Sailwave editor Button</description>
+ <files folder="packages">
+   <file type="plugin" id="sailwave" group="content">plg_content.zip</file>
+   <file type="plugin" id="sailwavebutton" group="editor-xtd">plg_button.zip</file>
+ </files>
+ </extension>
