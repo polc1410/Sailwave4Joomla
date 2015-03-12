@@ -9,10 +9,11 @@
     require_once ( JPATH_BASE.DS.'includes'.DS.'framework.php' );
     $mainframe =& JFactory::getApplication('administrator');       
     jimport( 'joomla.plugin.plugin' ); 
-    $language = JFactory::getLanguage();
-    //$language->load('plg_editors-xtd_sailwave-button', JPATH_ADMINISTRATOR, NULL, true);
-    //$language->load('plg_editors-xtd_sailwave-button', JPATH_SITE, NULL, true);
-    $language->load('plg_editors-xtd_sailwave-button');
+    $lang = JFactory::getLanguage();
+    //$language->load('plg_editors-xtd_sailwavebutton', $language->load('plg_editors-xtd_sailwave', JPATH_ADMINISTRATOR, NULL, true);, NULL, true);
+    //$language->load('plg_editors-xtd_sailwavebutton', JPATH_SITE, NULL, true);
+    $lang->load('plg_editors-xtd_sailwavebutton',JPATH_ADMINISTRATOR, 'en-GB', true );
+    //JFactory::getLanguage()->load('plg_editors-xtd_sailwavebutton');
     $ih_name = addslashes( $_GET['ih_name'] );
 ?>
 <html>
@@ -36,7 +37,7 @@
     </head>
     <body>
         <?php 
-            print_r ($language);
+            print_r ($lang);
            ?>
         <form name="inserthtml" id="inserthtml" onSubmit="return false;">
             <fieldset>
@@ -44,9 +45,9 @@
                     <tr>
                         <td colspan="2"><h3><?= JText::_('Sailwave Results Inserter') ?></h3></td>
                     </tr>
-                    <tr><td colspan="2"><b><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_IFUPLOADED) ?></b></td></tr>
+                    <tr><td colspan="2"><b><?= JText::_('PLG_EDITORS-XTD_SAILWAVEBUTTON_IFUPLOADED') ?></b></td></tr>
                     <tr>
-                        <td><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_SELECTFILE) ?></td>
+                        <td><?= JText::_('PLG_EDITORS-XTD_SAILWAVEBUTTON_SELECTFILE') ?></td>
                         <td nowrap>
                    <?php
                    $corepath = JPATH_BASE. DIRECTORY_SEPARATOR . "results";
@@ -78,9 +79,9 @@
 
                    ?>
                     </tr>
-                    <tr><td colspan="2"><b><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_TYPEFILE) ?></b></td></tr>
+                    <tr><td colspan="2"><b><?= JText::_('PLG_EDITORS-XTD_SAILWAVEBUTTON_TYPEFILE') ?></b></td></tr>
                     <tr>
-                        <td><?= JText::_(PLG_EDITORS-XTD_SAILWAVE_FILENAME) ?></td>
+                        <td><?= JText::_('PLG_EDITORS-XTD_SAILWAVEBUTTON_FILENAME') ?></td>
                         <td nowrap><input class="" id="filename" name="filename" value=""></td>
                     </tr
          </table>
