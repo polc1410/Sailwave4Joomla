@@ -58,7 +58,7 @@
                                    echo "<a href='?dir=".$filechain . $file."&ih_name=".$ih_name ."'>".$file . "/</a><br />";
                        } else {
                            if (pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_EXTENSION)=="html"){
-                            echo "<a href='#' onclick=\"document.getElementById('filename').value = '". $filechain.  $file. "';\">".pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME)."</a><br />";
+                            echo "<a href='#' onclick=\"document.getElementById('filename').value = '". $filechain.  pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME). "';\">".pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME)."</a><br />";
                            }
                        }
                    }
