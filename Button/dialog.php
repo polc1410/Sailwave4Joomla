@@ -55,8 +55,11 @@
                    $files = scandir ( $filepath);
                    foreach($files as $file) {
                        if (is_dir($filepath. DIRECTORY_SEPARATOR . $file)){
+                           if ($file != "."){
                                    echo "<a href='?dir=".$filechain . $file."&ih_name=".$ih_name ."'>".$file . "/</a><br />";
-                       } else {
+                           }        
+                                   
+                       if (!is_dir($filepath. DIRECTORY_SEPARATOR . $file)){
                            if (pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_EXTENSION)=="html"){
                             echo "<a href='#' onclick=\"document.getElementById('filename').value = '". $filechain.  pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME). "';\">".pathinfo(JPATH_BASE. DIRECTORY_SEPARATOR .$file, PATHINFO_FILENAME)."</a><br />";
                            }
